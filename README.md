@@ -39,7 +39,7 @@ Show us what you can do in 6 hours top :) Spend time on your code structure and 
 
 **Bonus:** If you have time, user should be able to choose the number he wants to call from by clicking on the `Call Using` block:
 
-![via](https://cloud.githubusercontent.com/assets/630714/19034702/46440a1c-8965-11e6-8cb5-caf124f6b3ec.gif)
+![via](https://cloud.githubusercontent.com/assets/630714/19038106/4d22e974-897a-11e6-843b-fabaee468bc9.gif)
 
 
 ## Installation
