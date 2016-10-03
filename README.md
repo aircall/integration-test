@@ -21,7 +21,7 @@ The goal of this test is to make you code the Keyboard view from the Phone app. 
 
 Your design should looks like this simple view:
 
-![image](https://cloud.githubusercontent.com/assets/630714/19034227/b1ee93d4-8962-11e6-98e4-ad31cc1077aa.png)
+![image](https://cloud.githubusercontent.com/assets/630714/19034620/c60c5f8e-8964-11e6-9b19-e2b59e0a8752.png)
 
 - **Max size**: `max-width: 375px; max-height: 666px;`
 - **Min size**: `min-width: 300px; min-height: 420px;`
@@ -30,7 +30,8 @@ Show us what you can do in 6 hours top :) Spend time on your code structure and 
 
 **Bonus:** the final user should be able to choose the number he wants to call from by clicking on the `Call Using` block:
 
-![via](https://cloud.githubusercontent.com/assets/630714/19034499/16ffc792-8964-11e6-845f-5d6a48f64dce.gif)
+![via](https://cloud.githubusercontent.com/assets/630714/19034702/46440a1c-8965-11e6-8cb5-caf124f6b3ec.gif)
+
 
 
 
