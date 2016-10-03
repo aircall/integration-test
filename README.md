@@ -29,7 +29,7 @@ Your design should looks like this simple view:
 
 ![image](https://cloud.githubusercontent.com/assets/630714/19034620/c60c5f8e-8964-11e6-9b19-e2b59e0a8752.png)
 
-We used [Pug](https://github.com/pugjs/pug) for layout, [Sass](http://sass-lang.com/) for stylesheets and [Vanilla JS](http://vanilla-js.com/) for JavaScript. Feel free to use tools you are comfortable.
+We used [Pug](https://github.com/pugjs/pug) for layout, [Sass](http://sass-lang.com/) for stylesheets and [Vanilla JS](http://vanilla-js.com/) for JavaScript. Feel free to use tools you are comfortable with.
 
 Show us what you can do in 6 hours top :) Spend time on your code structure and positioning your blocks. If you can impress our design team, then your job is done (*spoiler*: they will hate your code anyway).
 
@@ -42,7 +42,7 @@ Show us what you can do in 6 hours top :) Spend time on your code structure and 
 
 You're smart, right? So you shouldn't need any instruction :)
 
-Didn't succeed to install it on your own :cry: ? Don't waste 20min more, there you go:
+Didn't succeeded to install it on your own :cry: ? Don't waste 20min more, there you go:
 
 ```
 $> npm install
