@@ -1,0 +1,22 @@
+{
+  "name": "integration-test",
+  "version": "1.0.0",
+  "description": "Display the activity feed",
+  "author": "Tech team <jobs@aircall.io>",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aircall/integration-test"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.14.*"
+  },
+  "devDependencies": {
+    "gulp": "3.9.*",
+    "gulp-concat": "2.6.*",
+    "gulp-live-server": "0.0.*",
+    "gulp-pug": "3.0.*",
+    "gulp-sass": "2.3.*"
+  }
+}
