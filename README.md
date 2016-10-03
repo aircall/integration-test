@@ -8,23 +8,28 @@ This test is a part of our hiring process at Aircall for the [Web Dev position](
 
 ## Summary
 
-The goal of this test is to make you code the Keyboard view from the Phone app. This is how our looks like:
+The goal of this test is to make you code the Keyboard view from the Phone app. This is how our app looks like:
 
 ![image](https://cloud.githubusercontent.com/assets/630714/19034556/6bc905cc-8964-11e6-86d9-0234f782a59b.png)
 
-- **Mobile first** - the view must be responsive and usable on all devices (mobile & desktop)
 - **Flexbox** - use flexbox as much as possible
 - **Cross-browser** - ow crap! Sorry about that but yes, it should work on all browsers (Chrome, Firefox, Safari, IE9+)
+- **Mobile first** - the view must be responsive and usable on all devices (mobile & desktop)
 
 
 ## Code
+
+In this repository you'll find a simple HTML/CSS/JS skeleton with three files:
+
+- `app/views/index.pug` - Code your HTML structure here
+- `app/css/style.scss` - Design your wonderful app in this stylesheet
+- `app/js/app.js` - Implement fancy interactions here (you can load JQuery if you really need it)
 
 Your design should looks like this simple view:
 
 ![image](https://cloud.githubusercontent.com/assets/630714/19034620/c60c5f8e-8964-11e6-9b19-e2b59e0a8752.png)
 
-- **Max size**: `max-width: 375px; max-height: 666px;`
-- **Min size**: `min-width: 300px; min-height: 420px;`
+We used [Pug](https://github.com/pugjs/pug) for layout, [Sass](http://sass-lang.com/) for stylesheets and [Vanilla JS](http://vanilla-js.com/) for JavaScript. Feel free to use tools you are comfortable.
 
 Show us what you can do in 6 hours top :) Spend time on your code structure and positioning your blocks. If you can impress our design team, then your job is done (*spoiler*: they will hate your code anyway).
 
@@ -33,6 +38,16 @@ Show us what you can do in 6 hours top :) Spend time on your code structure and 
 ![via](https://cloud.githubusercontent.com/assets/630714/19034702/46440a1c-8965-11e6-8cb5-caf124f6b3ec.gif)
 
 
+## Installation
+
+You're smart, right? So you shouldn't need any instruction :)
+
+Didn't succeed to install it on your own :cry: ? Don't waste 20min more, there you go:
+
+```
+$> npm install
+$> gulp
+```
 
 
 ## Submission
