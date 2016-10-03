@@ -27,13 +27,17 @@ In this repository you'll find a simple HTML/CSS/JS skeleton with three files:
 
 Your design should looks like this simple view:
 
-![image](https://cloud.githubusercontent.com/assets/630714/19034620/c60c5f8e-8964-11e6-9b19-e2b59e0a8752.png)
+![keyboard](https://cloud.githubusercontent.com/assets/630714/19038032/dc309e46-8979-11e6-9311-94ee61da1086.gif)
+
+- **HTML**: code the structure of the app
+- **CSS**: design and position all blocks
+- **JS**: when the user clicks on a key, the input should be updated (do not format the number as shown in the GIF)
 
 We used [Pug](https://github.com/pugjs/pug) for layout, [Sass](http://sass-lang.com/) for stylesheets and [Vanilla JS](http://vanilla-js.com/) for JavaScript. Feel free to use tools you are comfortable with.
 
 Show us what you can do in 6 hours top :) Spend time on your code structure and positioning your blocks. If you can impress our design team, then your job is done (*spoiler*: they will hate your code anyway).
 
-**Bonus:** the final user should be able to choose the number he wants to call from by clicking on the `Call Using` block:
+**Bonus:** If you have time, user should be able to choose the number he wants to call from by clicking on the `Call Using` block:
 
 ![via](https://cloud.githubusercontent.com/assets/630714/19034702/46440a1c-8965-11e6-8cb5-caf124f6b3ec.gif)
 
