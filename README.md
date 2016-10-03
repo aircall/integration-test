@@ -10,8 +10,7 @@ This test is a part of our hiring process at Aircall for the [Web Dev position](
 
 The goal of this test is to make you code the Keyboard view from the Phone app. This is how our looks like:
 
-![image](https://cloud.githubusercontent.com/assets/630714/19033984/6d34e71c-8961-11e6-8f14-24cf1e6b4bbd.png)
-
+![image](https://cloud.githubusercontent.com/assets/630714/19034556/6bc905cc-8964-11e6-86d9-0234f782a59b.png)
 
 - **Mobile first** - the view must be responsive and usable on all devices (mobile & desktop)
 - **Flexbox** - use flexbox as much as possible
