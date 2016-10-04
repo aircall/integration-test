@@ -3,6 +3,8 @@ var gulp = require('gulp'),
      pug = require('gulp-pug'),
     sass = require('gulp-sass'),
      gls = require('gulp-live-server');
+     jquery = require('gulp-jquery');
+
 
 
 var server;
@@ -57,7 +59,6 @@ gulp.task('js:watch', function () {
 
 
 
-
 gulp.task('server', function() {
   server = gls.new('main.js');
   server.start();
@@ -67,6 +68,15 @@ gulp.task('server', function() {
   });
 });
 
+// Jquery Import
+gulp.task('jquery', function () {
+    return gulp.src('./node_modules/jquery-custom/jquery.2/src')
+        .pipe(jquery({
+            flags: ['-deprecated', '-event/alias', '-ajax/script', '-ajax/jsonp', '-exports/global']
+        }))
+        .pipe(gulp.dest('./public/vendor/'));
+    // creates ./public/vendor/jquery.custom.js 
+});
 
 // Default task
 gulp.task('default', [

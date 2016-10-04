@@ -56,8 +56,14 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
   display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
   flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
   justify-content: space-between;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
 
 }
 
@@ -66,7 +72,11 @@ body {
   display: -moz-flex;
   display: -webkit-flex;
   justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -webkit-justify-content: flex-start;
   flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
 }
 
 .header-content {
@@ -74,6 +84,8 @@ body {
   display: -moz-flex;
   display: -webkit-flex;
   justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -webkit-justify-content: flex-start;
   align-items: center;
   -moz-align-items: center;
   -webkit-align-items: center;
@@ -99,7 +111,7 @@ body {
  margin-bottom: 70px;
 }
 
-.screen {
+.input {
   border: 1px solid $light-grey;
   border-bottom: none;
   border-top-left-radius: 10px;
@@ -126,6 +138,12 @@ body {
     &:hover {
       transform:scale(1.3);
     }
+  }
+  .num{
+    font-weight: 400;
+    font-size: 30px;
+    color: $light-dark;
+    margin-right: 10px;
   } 
 }
 
@@ -230,8 +248,15 @@ body {
   }
   .user-infos{
     display: flex;
+    display: -moz-flex;
+    display: -webkit-flex;
     align-items:center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
     justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+
     .flag{ 
       width: 20px;
       height: 20px;
@@ -245,8 +270,14 @@ body {
     }
     .description{
       display: flex;
+      display: -moz-flex;
+      display: -webkit-flex;
       flex-direction: column;
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
       justify-content: center;
+      -moz-justify-content: center;
+      -webkit-justify-content: center;
       margin-right:50px;
       p{
         white-space: pre;
