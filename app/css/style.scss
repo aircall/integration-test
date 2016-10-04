@@ -2,7 +2,7 @@
 $primary: #34C228;
 $light-grey: #DFDFDE;
 $dark-grey: #C5C5C4;
-@light-dark: #636363;
+$light-dark: #636363;
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
 
 
@@ -77,11 +77,11 @@ body {
 }
 
 .separator {
-    height: 1px;
-    background: $light-grey;
-    width: 85%;
-    margin: 0 auto;
-  }
+  height: 1px;
+  background: $light-grey;
+  width: 85%;
+  margin: 0 auto;
+}
 
 .screen {
   border: 1px solid $light-grey;
@@ -179,5 +179,73 @@ body {
       font-weight: 600px;
       color: $light-grey;
     }
+  }
+}
+
+.select-country{
+  border: 1px solid $light-grey;
+  border-radius: 10px;
+  width: 85%;
+  height: 60px;
+  margin: 20px auto 0;
+  position: relative;
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-around;
+  -moz-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  cursor: pointer;
+  p{
+    white-space: pre;
+    color: #E2DFDF;
+    font-size: 10px;
+    font-weight: bolder;
+
+  }
+  li{
+    font-size:5px;
+    color: #E2DFDF;
+  }
+  h3{
+    font-weight:bolder;
+    line-height: 0;
+  }
+  
+  i{
+    color: #E2DFDF;
+  }
+  
+    .flag{ 
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 1px #EEEEEE;
+      img{
+        width: 25px;
+        height: 25px;
+    }
+  }
+  
+  &:after {
+    content: "";
+    position: absolute;
+    top: 52px;
+    left: 47%;
+    width: 18px;
+    height: 18px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-right: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+    background: white;
+    z-index: 150;
   }
 }
