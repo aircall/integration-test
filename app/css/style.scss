@@ -2,6 +2,7 @@
 $primary: #34C228;
 $light-grey: #DFDFDE;
 $dark-grey: #C5C5C4;
+@light-dark: #636363;
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
 
 
@@ -56,10 +57,14 @@ body {
 }
 
 
-.header{
+.header {
   display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
   justify-content: flex-start;
   align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
   img{
     height: 30px;
     border-radius: 50%;
@@ -71,9 +76,108 @@ body {
   }
 }
 
-.separator{
+.separator {
     height: 1px;
     background: $light-grey;
     width: 85%;
     margin: 0 auto;
   }
+
+.screen {
+  border: 1px solid $light-grey;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 85%;
+  height: 75px;
+  margin: 20px auto 0;
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+
+  i {
+    color: $dark-grey;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  } 
+}
+
+.dial{
+  border: 1px solid $light-grey;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 85%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.number {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  margin: 8px 20px;
+  transition: ease-in .2s;
+  cursor: pointer;
+  
+  h1 {
+    font-weight: 400;
+    font-size: 30px;
+    color: $light-dark;
+  }
+
+  &:hover h1 {
+    color: $primary;
+  }
+  
+  
+  .num1 {
+    margin-top: -15px
+  }
+  
+  .star1{
+    font-size: 50px;
+    font-weight: 300;
+    margin-top: 20px
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    
+    li {
+      margin-top: 2px;
+      font-size: 12px;
+      font-weight: 600px;
+      color: $light-grey;
+    }
+  }
+}
