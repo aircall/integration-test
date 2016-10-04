@@ -1,3 +1,10 @@
+/* colors and fonts */
+$primary: #34C228;
+$light-grey: #DFDFDE;
+$dark-grey: #C5C5C4;
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+
 html, body, h1, h2, h3, ul, li {
   margin: 0;
   padding: 0;
@@ -40,8 +47,33 @@ body {
   width: 100%;
   height: 100%;
   z-index: 100;
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: white;
   border-radius: 5px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
 }
+
+
+.header{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  img{
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  .text{
+    font-size: 17px;
+    font-weight: 600;
+  }
+}
+
+.separator{
+    height: 1px;
+    background: $light-grey;
+    width: 85%;
+    margin: 0 auto;
+  }
