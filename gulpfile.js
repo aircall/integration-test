@@ -3,7 +3,6 @@ var gulp = require('gulp'),
      pug = require('gulp-pug'),
     sass = require('gulp-sass'),
      gls = require('gulp-live-server');
-     jquery = require('gulp-jquery');
 
 
 

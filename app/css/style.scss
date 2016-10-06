@@ -1,10 +1,23 @@
-/* colors and fonts */
+/* utilities */
 $primary: #34C228;
 $light-grey: #DFDFDE;
 $dark-grey: #C5C5C4;
 $light-dark: #636363;
 $red: #EE5F5B;
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@font-face {
+    font-family: BrownLight;
+    font-weight: lighter;
+    src: url("https://cdn.aircall.io/fonts/brown-light.ttf");}
+@font-face {
+    font-family: BrownRegular;
+    src: url("https://cdn.aircall.io/fonts/brown-regular.ttf");}
+@font-face {
+    font-family: BrownBold;
+    font-weight: bold;
+    src: url("https://cdn.aircall.io/fonts/brown-bold.ttf");}        
+
+
 $phone: "(min-width: 320px) and (max-width: 568px)";
 
 html, body, h1, h2, h3, ul, li {
@@ -93,8 +106,8 @@ body {
     margin: 10px;
   }
   .text{
+    font-family:"BrownBold", sans-serif;
     font-size: 17px;
-    font-weight: 600;
   }
 }
 
@@ -186,6 +199,7 @@ body {
 
 
   h1 {
+    font-family:"BrownLight", sans-serif;
     font-weight: 400;
     font-size: 30px;
     color: $light-dark;
@@ -205,8 +219,8 @@ body {
   
   .star1{
     font-size: 50px;
-    font-weight: 300;
-    margin-top: 20px
+    font-weight:lighter;
+    margin-top: 20px;
   }
   
   ul {
@@ -248,7 +262,7 @@ body {
     white-space: pre;
     color: $light-grey;
     font-size: 10px;
-    font-weight: bolder;
+    font-family:"BrownBold", sans-serif;
 
   }
   .user-infos{
@@ -288,11 +302,11 @@ body {
         white-space: pre;
         color: $light-grey;
         font-size: 10px;
-        font-weight: bolder;
+        font-family:"BrownRegular", sans-serif;
         margin: 0 0 0 7px;
       }
       h3{
-        font-weight:bolder;
+        font-family:"BrownBold", sans-serif;
         margin: 0 0 0 7px;
       }
     }
@@ -369,6 +383,7 @@ body {
       text-align: center;
       border-radius: 3px;
       background: $red;
+      font-family:"BrownBold", sans-serif;
       font-weight: bolder;
     }
   }
