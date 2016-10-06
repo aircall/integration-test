@@ -20,6 +20,7 @@ for(var i = 0; i < number.length; i++){
   });
 }
 
+
 reset.addEventListener('click', function(){
   input.value = "";
 });

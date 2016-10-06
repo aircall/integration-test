@@ -15,8 +15,82 @@ $red: #EE5F5B;
 @font-face {
     font-family: BrownBold;
     font-weight: bold;
-    src: url("https://cdn.aircall.io/fonts/brown-bold.ttf");}        
+    src: url("https://cdn.aircall.io/fonts/brown-bold.ttf");}
 
+
+/* mixin */
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+@mixin flex-direction($value: row) {
+  @if $value == row-reverse {
+      -webkit-box-direction: reverse;
+      -webkit-box-orient: horizontal;
+  } @else if $value == column {
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+  } @else if $value == column-reverse {
+      -webkit-box-direction: reverse;
+      -webkit-box-orient: vertical;
+  } @else {
+      -webkit-box-direction: normal;
+      -webkit-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}       
+
+@mixin flex-wrap($value: nowrap) {-webkit-flex-wrap: $value;
+  -moz-flex-wrap: $value;
+  @if $value == nowrap {-ms-flex-wrap: none;} 
+  @else {-ms-flex-wrap: $value;}
+  flex-wrap: $value;
+}
+
+@mixin justify-content($value: flex-start) {
+  @if $value == flex-start {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+  } @else if $value == flex-end {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+  } @else if $value == space-between {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+  } @else if $value == space-around {
+      -ms-flex-pack: distribute;        
+  } @else {
+      -webkit-box-pack: $value;
+      -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  -moz-justify-content: $value;
+  justify-content: $value;
+}
+
+@mixin align-items($value: stretch) {
+  @if $value == flex-start {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+  } @else if $value == flex-end {
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+  } @else {
+      -webkit-box-align: $value;
+      -ms-flex-align: $value;
+  }
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  align-items: $value;
+}
 
 $phone: "(min-width: 320px) and (max-width: 568px)";
 
@@ -68,37 +142,21 @@ body {
   background: white;
   border-radius: 5px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
-  display: flex;
-  display: -moz-flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
+  @include flexbox;
+  @include flex-direction(column);
 
 }
 
 .header-container{
-  display: flex;
-  display: -moz-flex;
-  display: -webkit-flex;
-  justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -webkit-justify-content: flex-start;
-  flex-direction: column;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
+  @include flexbox;
+  @include justify-content(flex-start);
+  @include flex-direction(column);
 }
 
 .header-content {
-  display: flex;
-  display: -moz-flex;
-  display: -webkit-flex;
-  justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -webkit-justify-content: flex-start;
-  align-items: center;
-  -moz-align-items: center;
-  -webkit-align-items: center;
+  @include flexbox;
+  @include justify-content(flex-start);
+  @include align-items(center);
 
   img{
     height: 35px;
@@ -129,15 +187,9 @@ body {
   width: 85%;
   height: 75px;
   margin: 20px auto 0;
-  display: flex;
-  display: -moz-flex;
-  display: -webkit-flex;
-  justify-content: space-between;
-  -moz-justify-content: space-between;
-  -webkit-justify-content: space-between;
-  align-items: center;
-  -moz-align-items: center;
-  -webkit-align-items: center;
+  @include flexbox;
+  @include justify-content(space-between);
+  @include align-items(center);
   
   input{
     font-family:"BrownRegular", sans-serif;
@@ -151,14 +203,6 @@ body {
     outline: none;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type="number"] {
-  -moz-appearance: textfield;
-}
 
 i {
   color: $dark-grey;
@@ -177,7 +221,7 @@ i {
   color: $light-dark;
   margin-left: 10px;
 } 
-}
+
 
 .dial{
   border: 1px solid $light-grey;
@@ -185,35 +229,19 @@ i {
   border-bottom-right-radius: 10px;
   width: 85%;
   margin: 0 auto;
-  flex-wrap: wrap;
-  -moz-flex-wrap: row;
-  -webkit-flex-wrap: row;
-  display: flex;
-  display: -moz-flex;
-  display: -webkit-flex;
-  flex-direction: row;
-  -moz-flex-direction: row;
-  -webkit-flex-direction: row;
-  justify-content: center;
-  -moz-justify-content: center;
-  -webkit-justify-content: center;
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+  @include justify-content(center);
 }
 
 .number {
   width: 60px;
   height: 60px;
-  display: flex;
-  display: -moz-flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-  justify-content: center;
-  -moz-justify-content: center;
-  -webkit-justify-content: center;
-  align-items: center;
-  -moz-align-items: center;
-  -webkit-align-items: center;
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
   margin: 8px 20px;
   transition: ease-in .2s;
   
@@ -256,9 +284,7 @@ i {
   
   ul {
     list-style: none;
-    display: flex;
-    display: -moz-flex;
-    display: -webkit-flex;
+    @include flexbox;
     
     li {
       margin-top: 2px;
@@ -274,17 +300,11 @@ i {
   border-radius: 10px;
   width: 85%;
   height: 60px;
-  margin: 20px auto 0;
+  margin: 30px auto 0;
   position: relative;
-  display: flex;
-  display: -moz-flex;
-  display: -webkit-flex;
-  align-items: center;
-  -moz-align-items: center;
-  -webkit-align-items: center;
-  justify-content: space-around;
-  -moz-justify-content: space-around;
-  -webkit-justify-content: space-around;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-around);
   cursor: pointer;
   i{
     color: $dark-grey;
@@ -298,15 +318,9 @@ i {
 
   }
   .user-infos{
-    display: flex;
-    display: -moz-flex;
-    display: -webkit-flex;
-    align-items:center;
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    justify-content: center;
-    -moz-justify-content: center;
-    -webkit-justify-content: center;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
 
     .flag{ 
       width: 15px;
@@ -319,15 +333,9 @@ i {
       background-position: center;
     }
     .description{
-      display: flex;
-      display: -moz-flex;
-      display: -webkit-flex;
-      flex-direction: column;
-      -moz-flex-direction: column;
-      -webkit-flex-direction: column;
-      justify-content: center;
-      -moz-justify-content: center;
-      -webkit-justify-content: center;
+      @include flexbox;
+      @include flex-direction(column);
+      @include justify-content(center);
       margin-right:50px;
       p{
         color: #C0C4C3;
@@ -364,16 +372,10 @@ i {
 
 .call{
   .separator{
-    margin-top: 45px;
-    display: flex;
-    display: -moz-flex;
-    display: -webkit-flex;
-    align-items: center;
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    justify-content: center;
-    -moz-justify-content: center;
-    -webkit-justify-content: center;
+    margin-top: 35px;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
 
   }
   .button{ 
@@ -390,9 +392,9 @@ i {
     background: -webkit-linear-gradient(#2CAD00, #4AC420);
     background: -o-linear-gradient(#2CAD00, #4AC420);
     background: -moz-linear-gradient(#2CAD00, #4AC420);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
 
     img{
       width: 30px;
@@ -406,15 +408,9 @@ i {
       font-size: 8px;
       color: white;
       border: 2px solid white;
-      display: flex;
-      display: -moz-flex;
-      display: -webkit-flex;
-      align-items: center;
-      -moz-align-items: center;
-      -webkit-align-items: center;
-      justify-content: center;
-      -moz-justify-content: center;
-      -webkit-justify-content: center;
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(center);
       padding: 0 6px;
       line-height: 0.6px;
       text-align: center;

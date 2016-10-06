@@ -16,7 +16,7 @@ html(lang='en')
         .separator
       .wrapper-content 
         .input
-          input(type="text", maxlength="15")
+          input(type="text", maxlength="15", onkeypress='return event.charCode >= 48 && event.charCode <= 57')
           .reset
             i.fa.fa-times    
         .dial
