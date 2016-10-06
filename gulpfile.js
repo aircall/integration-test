@@ -10,6 +10,7 @@ var server;
 var cssPath = './app/css/';
 var jsPath = './app/js/';
 var htmlPath = './app/views/';
+var imgSrc = './app/images/**/*';
 
 
 
@@ -39,6 +40,14 @@ gulp.task('sass:watch', function () {
   gulp.watch(cssPath + '**/*.scss', ['sass:compile']);
 });
 
+/**
+ * images
+ */
+
+gulp.task('images', function() {
+  return gulp.src(imgSrc)
+    .pipe(gulp.dest('public/images'))
+})
 
 
 /**
@@ -71,7 +80,7 @@ gulp.task('server', function() {
 // Default task
 gulp.task('default', [
     'pug:compile', 'pug:watch',
-    'sass:compile', 'sass:watch',
+    'sass:compile', 'sass:watch','images',
     'js:compile', 'js:watch',
     'server'
   ]);

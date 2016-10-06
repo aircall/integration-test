@@ -13,7 +13,7 @@
     "express": "4.14.*"
   },
   "devDependencies": {
-    "gulp": "3.9.*",
+    "gulp": "^3.9.1",
     "gulp-concat": "2.6.*",
     "gulp-live-server": "0.0.*",
     "gulp-pug": "3.0.*",
