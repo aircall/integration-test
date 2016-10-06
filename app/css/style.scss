@@ -188,32 +188,37 @@ body {
   height: 75px;
   margin: 20px auto 0;
   @include flexbox;
-  @include justify-content(space-between);
+  @include justify-content(flex-start);
   @include align-items(center);
   
   input{
-    font-family:"BrownRegular", sans-serif;
-    font-size: 25px;
+    font-family:"Brownlight", sans-serif;
+    font-size: 30px;
     border: none;
     color: $light-dark;
-    padding: 10px;
+    padding-left: 10px;
   }
-}
   textarea:focus, input:focus{
     outline: none;
-}
+  }
 
-
-i {
-  color: $dark-grey;
-  font-size: 16px;
-  margin-right: 20px;
-  cursor: pointer;
-  transition: all 0.3s;
-  &:hover {
-    transform:scale(1.3);
+  .reset{
+    i {
+    color: $dark-grey;
+    font-size: 16px;
+    // margin-right: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transform:scale(1.3);
+    }
+  }
   }
 }
+  
+
+
+
 
 .num{
   font-weight: 400;
