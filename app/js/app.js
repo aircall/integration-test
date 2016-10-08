@@ -2,8 +2,8 @@
   'use strict';
 
 var input = document.querySelectorAll(".input input")[0];
-var reset = document.querySelectorAll(".reset i")[0];
-var number = document.querySelectorAll(".dial .number button");
+var reset = document.querySelectorAll(".input i")[0];
+var number = document.querySelectorAll(".keyboard .number button");
 
 
 for(var i = 0; i < number.length; i++){

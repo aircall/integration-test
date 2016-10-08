@@ -9,17 +9,16 @@ html(lang='en')
 
   body
     .container
-      .header-container
-        .header-content
-          img(src="https://d1bvdxis049wi4.cloudfront.net/assets/home_v2/twitter_card-d17a116ce3bcf1e6e5b591e31c9f642d.png")
-          .text Keyboard
-        .separator
-      .wrapper-content 
+      .header        
+        img(src="https://d1bvdxis049wi4.cloudfront.net/assets/home_v2/twitter_card-d17a116ce3bcf1e6e5b591e31c9f642d.png")
+        p Keyboard
+      .separator
+      .dialer 
+
         .input
           input(type="text", maxlength="15", onkeypress='return event.charCode >= 48 && event.charCode <= 57')
-          .reset
-            i.fa.fa-times    
-        .dial
+          i.fa.fa-times    
+        .keyboard
           .number
             button.num1 1
           .number          
@@ -72,7 +71,7 @@ html(lang='en')
                 li x
                 li y       
                 li z
-          .star.number
+          .number
             button.star1 * 
           .number
             button 0    
@@ -90,13 +89,11 @@ html(lang='en')
               p +33 6 64 09 87 28
           i.fa.fa-chevron-down
         .call
+          .button
+             img(src="images/calling.svg")
+             .beta
+               p BETA
           .separator
-            .button
-               img(src="images/calling.svg")
-               .beta
-                 p BETA
-         
-    //- script(src="http://code.jquery.com/jquery-latest.min.js",
-    //-     type="text/javascript")             
+                    
     script(type='text/javascript', src='/js/app.js')
 

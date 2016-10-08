@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/public/views/index.html');
 });
 
-var port = 8080;
+var port = 8081;
 app.listen(port, function () {
   console.info('[server] Listening on port ' + port);
 });
