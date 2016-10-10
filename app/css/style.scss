@@ -4,7 +4,7 @@ $light-grey: #DFDFDE;
 $dark-grey: #C5C5C4;
 $light-dark: #636363;
 $red: #EE5F5B;
-$phone: "(min-height: 420px)";
+$phone: "(min-width: 320px) and (max-width: 568px)";
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
 @font-face {
     font-family: BrownLight;
@@ -93,7 +93,7 @@ $phone: "(min-height: 420px)";
   align-items: $value;
 }
 
-$phone: "(min-width: 320px) and (max-width: 568px)";
+$phone: "(max-height: 460px)";
 
 html, body, h1, h2, h3, ul, li {
   margin: 0;
@@ -132,7 +132,7 @@ body {
   position: fixed;
   max-width: 375px;
   max-height: 666px;
-  min-width: 300px;
+  min-width: 260px;
   min-height: 420px;
   width: 100%;
   height: 100%;
@@ -152,7 +152,7 @@ body {
   @include flexbox;
   @include justify-content(flex-start);
   @include align-items(center);
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   img{
     height: 35px;
     border-radius: 50%;
@@ -168,15 +168,16 @@ body {
   background: $light-grey;
   width: 85%;
   margin: 0 auto;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
 }
 .dialer{
- // margin-top: 10px;
  flex: 0 1 100%;
  @include flexbox
  @include flex-direction(column);
  margin-top: 25px;
- // @include justify-content(space-around);
+  @media  #{$phone} {
+    margin-top: 5px;
+  }
 }
 
 .input {
@@ -186,7 +187,7 @@ body {
   border-top-right-radius: 10px;
   width: 85%;
   height: 75px;
-  min-height: 30px;
+  min-height: 31px;
   margin: 0 auto 0;
   @include flexbox;
   @include justify-content(flex-start);
@@ -199,7 +200,6 @@ body {
     color: $light-dark;
     padding-left: 10px;
     width:85%;
-    // max-width: 280px;
     flex: 0 1 auto;
   }
   textarea:focus, input:focus{
@@ -226,22 +226,37 @@ body {
   width: 85%;
   margin: 0 auto;
   flex: 1 1 auto;
-  // min-height: 280px;
+  min-height: 200px;
   @include flexbox;
   @include flex-wrap(wrap);
   @include flex-direction(row);
   @include justify-content(center);
-}
-
-.number {
-  flex: 1 1 33%;
-  height: 60px;
+  .col-1{
   @include flexbox;
   @include flex-direction(column);
   @include justify-content(center);
   @include align-items(center);
-  margin: 8px 0px;
-  transition: ease-in .2s;
+  flex: 1 1 33%;
+}
+
+.col-2{
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  flex: 1 1 33%;
+}
+
+.col-3{
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  flex: 1 1 33%;
+}
+}
+
+.number {
 
   button{
     font-family:"BrownLight", sans-serif;
@@ -252,10 +267,12 @@ body {
     background:none;
     outline: none;
     cursor: pointer;
+    transition: ease-in .2s;
     flex: 0 1 auto;
      &:hover {
+
     color: $primary;
-  }
+    }
   }
 
 
@@ -288,32 +305,12 @@ body {
   }
 }
 
-.col-1{
-  @include flexbox;
-  @include flex-direction(column);
-  @include justify-content(center);
-  @include align-items(center);
-}
 
-.col-2{
-  @include flexbox;
-  @include flex-direction(column);
-  @include justify-content(center);
-  @include align-items(center);
-}
-
-.col-3{
-  @include flexbox;
-  @include flex-direction(column);
-  @include justify-content(center);
-  @include align-items(center);
-}
 
 .select-country{
   border: 1px solid $light-grey;
   border-radius: 10px;
   width: 85%;
-  // height: 60px;
   min-height: 30px;
   margin: 25px auto 0;
   position: relative;
@@ -323,6 +320,9 @@ body {
   @include justify-content(space-around);
   flex: 0 1 auto;
   cursor: pointer;
+  @media  #{$phone} {
+    margin: 5px auto 0;
+  }
   i{
     color: $dark-grey;
     font-size: 10px;
@@ -367,23 +367,24 @@ body {
     }
   }
 
-  // &:after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 51px;
-  //   left: 47%;
-  //   width: 18px;
-  //   height: 18px;
-  //   transform: rotate(45deg);
-  //   -webkit-transform: rotate(45deg);
-  //   -moz-transform: rotate(45deg);
-  //   -o-transform: rotate(45deg);
-  //   -ms-transform: rotate(45deg);
-  //   border-right: 1px solid $light-grey;
-  //   border-bottom: 1px solid $light-grey;
-  //   background: white;
-  //   z-index: 150;
-  // }
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 100%;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-right: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+    background: white;
+    z-index: 150;
+  }
 }
 
 
@@ -411,7 +412,10 @@ body {
     @include flexbox;
     @include justify-content(center);
     @include align-items(center);
-
+    @media  #{$phone} {
+      width: 45px;
+      height: 45px;
+     }
     img{
       width: 30px;
       height: 30px;
@@ -438,6 +442,6 @@ body {
   }
   .separator {
   position: absolute;
-}
+  }
 }
 
