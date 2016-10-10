@@ -288,6 +288,27 @@ body {
   }
 }
 
+.col-1{
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.col-2{
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.col-3{
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
 .select-country{
   border: 1px solid $light-grey;
   border-radius: 10px;
