@@ -1,58 +1,51 @@
-# [aircall.io](https://aircall.io) - Web Dev technical test
+# [aircall.io](https://aircall.io) - Front End Integration test
 
-This test is a part of our hiring process at Aircall for the [Web Dev position](https://aircall.workable.com/jobs/335858). It should take you between 3 and 6 hours depending on your experience.
+This test is a part of our hiring process at Aircall for the [Front End Developer position](https://jobs.lever.co/aircall/2ffeb0b4-a76f-4c13-aa36-1ffd17c7b93c). It should take you between 3 and 6 hours depending on your experience.
 
 **Feel free to apply! Drop us a line with your LinkedIn/GitHub/Twitter/AnySocialProfileWhereYouAreActive at jobs@aircall.io**
 
-
-
 ## Summary
 
-The goal of this test is to make you code the Keyboard view from the Phone app. This is how our app looks like:
+The goal of this test is to make you integrate the design and animations of the Keyboard view from the Phone app. [Here is the prototype of the concerned screens on Marvel](https://marvelapp.com/656if15).
 
-![image](https://cloud.githubusercontent.com/assets/630714/19034556/6bc905cc-8964-11e6-86d9-0234f782a59b.png)
+We'll be focusing on how you'll organize your components and your style, how you coded the CSS and Javascript and obviously how close the result is from the prototype.
 
-- **Flexbox** - use flexbox as much as possible
-- **Cross-browser** - ow crap! Sorry about that but yes, it should work on all browsers (Chrome, Firefox, Safari, IE9+)
-- **Mobile first** - the view must be responsive and usable on all devices (mobile & desktop)
+In order of priority, we'd like to see:
 
+- [The keyboard view](https://marvelapp.com/656if15/screen/50639157)
+- [The number prefix selection modal](https://marvelapp.com/656if15/screen/50639160)
+- [The line selection modal](https://marvelapp.com/656if15/screen/50639164)
+
+**Bonus**: Code and animate screen transitions.
+
+Show us what you can do in 6 hours top :) We'll do a debrief afterwards and it's ok if you didn't integrate all of it.
 
 ## Code
 
-In this repository you'll find a simple HTML/CSS/JS skeleton with three files:
+In this repository you'll find a simple React skeleton, based on [Create React App](https://facebook.github.io/create-react-app/).
 
-- `app/views/index.pug` - Code your HTML structure here
-- `app/css/style.scss` - Design your wonderful app in this stylesheet
-- `app/js/app.js` - Implement fancy interactions here (you can load JQuery if you really need it)
+Our font and some variables are already loaded from the `styles` folder.
 
-Your design should looks like this simple view:
+We use `SCSS` and `CSS modules`, to have `@import` and ensure CSS classes don't collapse.
 
-![keyboard](https://cloud.githubusercontent.com/assets/630714/19038032/dc309e46-8979-11e6-9311-94ee61da1086.gif)
+If you're not familiar with it, check how we import variables in `src/App/styles.module.scss` and how we import the style in `src/App/index.js`, as well as [the official documentation](https://facebook.github.io/create-react-app/docs/adding-a-css-modules-stylesheet).
 
-- **HTML**: code the structure of the app
-- **CSS**: design and position all blocks
-- **JS**: when the user clicks on a key, the input should be updated (do not format the number as shown in the GIF)
+For simplicity sake, we've exported our assets in png format and put them in the `src/images` folder.
 
-We used [Pug](https://github.com/pugjs/pug) for layout, [Sass](http://sass-lang.com/) for stylesheets and [Vanilla JS](http://vanilla-js.com/) for JavaScript. Feel free to use tools you are comfortable with.
+## Extra indications
 
-Show us what you can do in 6 hours top :) Spend time on your code structure and positioning your blocks. If you can impress our design team, then your job is done (*spoiler*: they will hate your code anyway).
-
-**Bonus:** If you have time, user should be able to choose the number he wants to call from by clicking on the `Call Using` block:
-
-![via](https://cloud.githubusercontent.com/assets/630714/19038106/4d22e974-897a-11e6-843b-fabaee468bc9.gif)
-
+- **Flexbox** - Use flexbox as much as possible
+- **Browser support** - You only need to bother about Chrome > 66 ! For Call Quality reasons, we target only the latest Chrome versions and no other browser.
+- **Viewport** - The width is always 375px and the with can be either 600px (to integrate into CRMs) or 666px.
 
 ## Installation
 
-You're smart, right? So you shouldn't need any instruction :)
-
-Didn't succeeded to install it on your own :cry: ? Don't waste 20min more, there you go:
+We're using [yarn](https://yarnpkg.com/lang/en/) here:
 
 ```
-$> npm install
-$> gulp
+yarn install
+yarn start
 ```
-
 
 ## Submission
 
