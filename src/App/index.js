@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className={styles.app}>
-        <img src={avatar} />
+        <img src={avatar} alt="Avatar" />
       </div>
     );
   }
