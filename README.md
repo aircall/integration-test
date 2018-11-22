@@ -18,7 +18,7 @@ In order of priority, we'd like to see:
 
 **Bonus**: Code and animate screen transitions.
 
-Show us what you can do in 6 hours top :) We'll do a debrief afterwards and it's ok if you didn't integrate all of it.
+Show us what you can do in 6 hours top :) We'll do a debrief afterwards and it's ok if you didn't integrate all of it #qualityOverQuantity
 
 ## Code
 
@@ -37,8 +37,11 @@ For simplicity sake, we've exported our assets in png format and put them in the
 - **Flexbox** - Use flexbox as much as possible
 - **Browser support** - You only need to bother about Chrome > 66 ! For Call Quality reasons, we target only the latest Chrome versions and no other browser.
 - **Viewport** - The width is always 376px and the with can be either 600px (to integrate into CRMs) or 666px.
+- **Marvel prototype** - To view the detailed specs of the screens (dimensions, colors...), click on the "Handoff" button at the bottom left.
 
 ## Installation
+
+Install Node.js >= 10.11.0 (we recommended using `nvm`).
 
 We're using [yarn](https://yarnpkg.com/lang/en/) here:
 
