@@ -2,7 +2,8 @@ $app-background: #f6f8fa;
 $app-dark-background: #233142;
 $app-font-color: #333333;
 
-$font-base: 13px 'Mark', 'Work Sans', Helvetica, sans-serif;
+$font-family: 'Mark', 'Work Sans', Helvetica, sans-serif;
+$font-base: 13px $font-family;
 
 $app-height: 666px;
 $app-cti-height: 600px;
