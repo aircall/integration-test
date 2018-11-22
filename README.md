@@ -36,7 +36,7 @@ For simplicity sake, we've exported our assets in png format and put them in the
 
 - **Flexbox** - Use flexbox as much as possible
 - **Browser support** - You only need to bother about Chrome > 66 ! For Call Quality reasons, we target only the latest Chrome versions and no other browser.
-- **Viewport** - The width is always 375px and the with can be either 600px (to integrate into CRMs) or 666px.
+- **Viewport** - The width is always 376px and the with can be either 600px (to integrate into CRMs) or 666px.
 
 ## Installation
 
