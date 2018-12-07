@@ -16,3 +16,27 @@
   overflow: hidden;
   position: relative;
 }
+* :global {
+  box-sizing: border-box;
+}
+a :global {
+  text-decoration: none;
+}
+button :global {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  font-family: $font-family;
+  cursor: pointer;
+}
+.FR :global {
+  background: url('../images/flag_fr.png') no-repeat transparent left 15px center;
+  background-size: 25px auto;
+}
+ul :global ,li :global {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+

@@ -2,6 +2,7 @@
 
 html {
   height: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -16,4 +17,5 @@ body {
   vertical-align: baseline;
   align-items: center;
   overflow: hidden;
+  font: $font-base;
 }

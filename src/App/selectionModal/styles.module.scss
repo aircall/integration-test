@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+@import '../../styles/fonts';
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  font: $font-base;
+  color: $app-font-color;
+  align-items: center;
+  width: $app-width;
+  height: $app-height;
+  background: #F6F8FA;
+  position: absolute;
+  margin-top: 666px;
+  transition: all 0.5s;
+}
+.modal-open :global {
+    margin-top: 0;
+}
+.selectionOptions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    h1 {
+        font-size: 14px;
+    }
+}
+

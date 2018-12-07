@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+@import '../../../styles/fonts';
+
+.header {
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.08);
+  position: relative;
+  .back {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    top:0;
+    left: 0;
+    button{
+      color: $app-secondary;
+      font-size: 16px;
+      display: block;
+      height: 100%;
+      width: 100%;
+      line-height: 50px;
+    }
+  }
+  .title {
+    flex-grow: 2;
+    h1{
+      font-weight: 700;
+      color:$app-dark-text;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+@import '../../styles/fonts';
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  font: $font-base;
+  color: $app-font-color;
+  align-items: center;
+  width: $app-width;
+  height: $app-height;
+  background: $app-background;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFF;
+}
+

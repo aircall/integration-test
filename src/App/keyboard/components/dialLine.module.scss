@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+@import '../../../styles/fonts';
+
+.dialLine {
+    width: 100%;
+    border-bottom:  1px solid rgba(0, 0, 0, 0.08);
+    height: 75px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    input {
+        height: 50px;
+        width: 275px;
+        font: $font-base;
+        letter-spacing: -1px;
+        font-weight: 100;
+        font-size: 20px;
+        border: 0 none;
+        box-shadow: 0 none;
+        outline: 0 none;
+    }
+    span {
+        height: 50px;
+        width: 50px;
+        background: url('../../../images/flag_fr.png') no-repeat;
+        background-size: 20px 20px;
+        text-align: center;
+        background-position: center right 7px;
+        margin-left: -30px;
+        &.us_prefix {
+            background-image: url('../../../images/flag_us.png');
+        }
+    }
+}
