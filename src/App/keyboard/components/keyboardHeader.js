@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '../keyboard.module.scss';
+import styles from './keyboardHeader.module.scss';
 import avatar from '../../../images/avatar.png';
 import mic from '../../../images/mic.png';
 
@@ -12,9 +12,9 @@ class KeyboardHeader extends Component {
           </div>
           <div className={styles.title}><h1>Keyboard</h1></div>
           <div className={styles.mike}>
-            <a href="">
+            <button>
               <img src={mic} alt="Micro" />
-            </a>
+            </button>
           </div>
 
           

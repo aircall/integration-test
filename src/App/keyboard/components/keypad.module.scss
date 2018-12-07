@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+@import '../../../styles/fonts';
+
+.keypad {
+    width: 100%;
+    flex-grow: 2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 5% 10%;
+    box-sizing: border-box;
+    button {
+        width: 30%;
+        height: 55px;
+        font-size: 36px;
+        font-weight:100;
+        position: relative;
+        text-align: center;
+        line-height: 55px;
+        cursor: pointer;
+        span {
+            font-size: 9px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            height: 13px;
+            line-height: 13px;
+            color: $app-light-text;
+            letter-spacing: 2px;
+            font-weight:300;
+        }
+    }
+}

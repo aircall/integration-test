@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '../keyboard.module.scss';
+import styles from './keypad.module.scss';
 
 class Keypad extends Component {
     render() {
@@ -51,7 +51,7 @@ class Keypad extends Component {
 
       return (
           <div className={styles.keypad}>
-            {keypadList.map( (item, i) => <article className={styles.keypad_item}>{item.num}<span>{item.letters}</span></article>)}
+            {keypadList.map( (item, i) => <button key={i}>{item.num}<span>{item.letters}</span></button>)}
           </div>
       );
     }

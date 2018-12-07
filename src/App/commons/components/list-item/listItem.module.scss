@@ -1,0 +1,33 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/fonts';
+
+.listItem {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 10px;
+    button {
+        width:100%;
+        height: 65px;
+        letter-spacing: -1px;
+        font-weight: 100;
+        font-size: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        text-align: left;
+        text-indent: 50px;
+
+    }
+    span {
+        color: $app-dark-text;
+        display: block;
+        &.name {
+            font-weight: 500;
+            font-size: 14px;
+        }
+        &.number{
+            font-weight: 300;
+            font-size: 12px;
+        }
+    }
+}
